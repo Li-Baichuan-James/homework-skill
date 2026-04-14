@@ -9,6 +9,12 @@
 "你以为你累得像条狗，你错了，狗并没有你这么累。
 ——鲁迅"
 
+> “作业，我有四不写。  
+> 1. 会的我不写——落笔为提升，已然通晓，何需多费笔墨？  
+> 2. 不会的我不写——懵懂无解，强求落笔，不过是自欺欺人。  
+> 3. 要交的我不写——提笔为修行，非为取悦他人，何必迎合敷衍？  
+> 4. 不交的我不写——墨落皆心血，若无人问津，落笔便失了意义。”
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet)](https://claude.ai/code)
 [![AgentSkills](https://img.shields.io/badge/AgentSkills-Standard-green)](https://agentskills.io)
@@ -21,12 +27,6 @@
 ---
 
 ## 中文
-
-> “作业，我有四不写。  
-> 1. 会的我不写——落笔为提升，已然通晓，何需多费笔墨？  
-> 2. 不会的我不写——懵懂无解，强求落笔，不过是自欺欺人。  
-> 3. 要交的我不写——提笔为修行，非为取悦他人，何必迎合敷衍？  
-> 4. 不交的我不写——墨落皆心血，若无人问津，落笔便失了意义。”
 
 当代大学生的作业困局，大抵是复制粘贴问AI，深度思考等答案，彻底沦为的“AI搬运工”，在无意义的循环里自我内耗，徒留一身疲惫与空洞。
 
