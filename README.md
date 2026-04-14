@@ -10,11 +10,14 @@
 ——鲁迅"
 
 
+
 > “作业，我有四不写。  
 > 会的我不写——落笔为提升，已然通晓，何需多费笔墨？  
 > 不会的我不写——懵懂无解，强求落笔，不过是自欺欺人。  
 > 要交的我不写——提笔为修行，非为取悦他人，何必迎合敷衍？  
 > 不交的我不写——墨落皆心血，若无人问津，落笔便失了意义。”
+>
+> 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet)](https://claude.ai/code)
