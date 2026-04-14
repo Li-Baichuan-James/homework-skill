@@ -1,6 +1,19 @@
 # Homework Solver Skill
 
+<div align="center">
+
+## 作业.SKILL
+
+"把时间从重复劳动里抢回来，把挂科风险留给门禁系统。"
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet)](https://claude.ai/code)
+[![AgentSkills](https://img.shields.io/badge/AgentSkills-Standard-green)](https://agentskills.io)
+[![Bilingual](https://img.shields.io/badge/README-中文%20%7C%20English-4c9a2a)](#中文)
+
 [中文](#中文) | [English](#english)
+
+</div>
 
 ---
 
