@@ -148,4 +148,4 @@ Please solve only Q2 and Q4 and generate the solution files.
 
 ### License
 
-Use the same license as your skill repository. If you have no license yet, add one before public release.
+MIT License
