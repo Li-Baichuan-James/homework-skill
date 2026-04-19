@@ -97,7 +97,7 @@
 ## English
 
 `homework-solver` is a workflow-driven skill for engineering and mathematics homework PDFs.
-It enforces a strict sequence: parse the assignment, solve by question group, verify independently, then assemble and validate deliverables.
+It enforces a strict controller workflow: parse the assignment, solve one question group, verify that same group with a fresh verifier, pass the question gate, then assemble and validate deliverables.
 
 ### Intended Use
 
@@ -109,8 +109,9 @@ It enforces a strict sequence: parse the assignment, solve by question group, ve
 ### Design Principles
 
 - **Question-level gates**: each included question group must pass both solver and verifier phases
-- **Deterministic workflow**: read -> decompose -> solve -> verify -> normalize -> assemble -> build -> final verification
-- **Portable operation**: does not require any specific companion skill to function
+- **Per-group sequencing**: do not solve all questions first and verify later in a batch
+- **Deterministic workflow**: read -> decompose -> solve -> verify -> gate -> normalize -> assemble -> build -> final verification
+- **Strict skill boundary**: only `pdf` may be used alongside this skill
 - **Verification discipline**: successful compilation is not treated as proof correctness
 
 ### Quick Start
@@ -132,13 +133,15 @@ Please solve only Q2 and Q4 and generate the solution files.
 
 1. The agent reads and extracts the PDF before solving.
 2. Unreadable or ambiguous prompt content is escalated instead of guessed.
-3. Each question group is solved and then independently verified before assembly.
-4. Final output includes artifacts plus explicit verification status.
+3. Each question group is solved and then independently verified by a fresh verifier before assembly.
+4. If you ask to complete the homework and do not opt out, the default deliverable is a written answer document with `.tex` and compiled `.pdf` artifacts.
+5. Final output includes artifacts plus explicit verification status.
 
 ### Portability Notes
 
-- If a dedicated PDF skill exists, it may be used; otherwise native PDF tooling is sufficient.
-- If subagents are available, solver and verifier roles are split.
+- `pdf` is the only companion skill this workflow should use.
+- If a dedicated PDF skill exists, it should be used; otherwise native PDF tooling is sufficient.
+- If subagents are available, solver and verifier roles are split and must remain separate for each question group.
 - If subagents are unavailable, the same two-phase discipline is executed sequentially.
 
 ### Repository Contents
