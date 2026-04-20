@@ -87,10 +87,19 @@
 
 平台条件不完美也能跑，别总拿环境当借口：
 
+- 若你希望 skill 默认产出可编译的 `.pdf`，本机需要可用的 LaTeX 环境。常见可用组合包括：`pdflatex`、`xelatex`、`latexmk`，Windows 上通常是 MiKTeX，macOS/Linux 上通常是 TeX Live。
+- 若缺少可用 TeX 引擎，skill 仍可生成 `.tex`，但应把 `.pdf` 视为 blocked artifact outcome，而不是假装已经完整完成。
 - 如果平台有独立 PDF skill，会优先使用
 - 如果没有，就用平台原生 PDF 读取能力
 - 如果平台支持 subagent，按 solver/verifier 分角色执行
 - 如果不支持，也必须执行“先解后验”的两阶段流程
+
+### 与 `pdf` skill 的配合
+
+- `homework-solver` 默认把 `pdf` 视为唯一配合使用的 companion skill。
+- `pdf` skill 负责 PDF 读取、提取、OCR、页面内容确认等输入侧工作。
+- `homework-solver` 负责题目拆分、解题、画图、逐题验算、组装答案文档、构建 `.tex/.pdf`、以及最终交付验证。
+- 换句话说：`pdf` 先把题读清楚，`homework-solver` 再把整份作业做完。
 
 ---
 
@@ -139,10 +148,18 @@ Please solve only Q2 and Q4 and generate the solution files.
 
 ### Portability Notes
 
+- A working TeX environment is required if you want the skill to produce compiled `.pdf` output by default. Typical usable engines are `pdflatex`, `xelatex`, or `latexmk`; on Windows this is often MiKTeX, and on macOS/Linux it is often TeX Live.
+- If no usable TeX engine is available, the skill can still deliver `.tex`, but the missing compiled `.pdf` should be reported as a blocked artifact outcome rather than full completion.
 - `pdf` is the only companion skill this workflow should use.
 - If a dedicated PDF skill exists, it should be used; otherwise native PDF tooling is sufficient.
 - If subagents are available, solver and verifier roles are split and must remain separate for each question group.
 - If subagents are unavailable, the same two-phase discipline is executed sequentially.
+
+### How It Cooperates With `pdf`
+
+- `pdf` handles PDF-side work such as extraction, OCR, and recovering readable question text.
+- `homework-solver` then handles decomposition, solving, required figures, verification, answer-sheet assembly, and artifact validation.
+- In short: `pdf` helps the agent read the assignment correctly, and `homework-solver` governs how the solved deliverable is produced.
 
 ### Repository Contents
 
