@@ -46,7 +46,7 @@
 
 ### 安装
 
-OpenCode / Claude Code / 其他 LLM agent：
+复制粘贴给 OpenCode / Claude Code / 其他 LLM agent：
 
 ```text
 Fetch and follow instructions from:
@@ -57,7 +57,7 @@ https://raw.githubusercontent.com/Li-Baichuan-James/homework-skill/main/INSTALL.
 
 别再古法复制粘贴/截图问网页版AI，现在一句话就能让CLI Agent帮你完成作业：
 
-1. 严格按 `INSTALL.md` 完成安装与验证：
+1. 严格按 `INSTALL.md` 完成安装与验证 （让Agent自己配置）：
 
 ```text
 https://raw.githubusercontent.com/Li-Baichuan-James/homework-skill/main/INSTALL.md
