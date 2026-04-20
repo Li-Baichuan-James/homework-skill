@@ -44,11 +44,24 @@
 作者亲力亲为，在完成 114514 份作业的疲惫征程中幡然醒悟，耗尽心力打磨出这份大学生懒人福音——作业.SKILL。
 当他人仍在案前埋首，与作业苦苦纠缠、步履维艰时，你早已弹指间秒完任务，煮一壶清茶，赴一场悠闲下午茶之约，尽显降维打击的从容。
 
+### 安装
+
+OpenCode / Claude Code / 其他 LLM agent：
+
+```text
+Fetch and follow instructions from:
+https://raw.githubusercontent.com/Li-Baichuan-James/homework-skill/main/INSTALL.md
+```
+
 ### 快速开始
 
 别再古法复制粘贴/截图问网页版AI，现在一句话就能让CLI Agent帮你完成作业：
 
-1. 安装 skill（把整个 `homework-solver/` 目录放到你的 skills 路径）
+1. 严格按 `INSTALL.md` 完成安装与验证：
+
+```text
+https://raw.githubusercontent.com/Li-Baichuan-James/homework-skill/main/INSTALL.md
+```
 2. 在会话里直接说你要完成作业即可（不必显式提到这个 skill 名称）。比如：
 
 ```text
@@ -85,14 +98,11 @@
 
 ### 安装与兼容性说明
 
-平台条件不完美也能跑，别总拿环境当借口：
+完整的安装、验证、`pdf` companion 要求、以及 LaTeX 环境检查都以 `INSTALL.md` 为准：
 
-- 若你希望 skill 默认产出可编译的 `.pdf`，本机需要可用的 LaTeX 环境。常见可用组合包括：`pdflatex`、`xelatex`、`latexmk`，Windows 上通常是 MiKTeX，macOS/Linux 上通常是 TeX Live。
-- 若缺少可用 TeX 引擎，skill 仍可生成 `.tex`，但应把 `.pdf` 视为 blocked artifact outcome，而不是假装已经完整完成。
-- 如果平台有独立 PDF skill，会优先使用
-- 如果没有，就用平台原生 PDF 读取能力
-- 如果平台支持 subagent，按 solver/verifier 分角色执行
-- 如果不支持，也必须执行“先解后验”的两阶段流程
+```text
+https://raw.githubusercontent.com/Li-Baichuan-James/homework-skill/main/INSTALL.md
+```
 
 ### 与 `pdf` skill 的配合
 
@@ -107,6 +117,15 @@
 
 `homework-solver` is a workflow-driven skill for engineering and mathematics homework PDFs.
 It enforces a strict controller workflow: parse the assignment, solve one question group, verify that same group with a fresh verifier, pass the question gate, then assemble and validate deliverables.
+
+### Installation
+
+Tell your LLM agent:
+
+```text
+Fetch and follow instructions from:
+https://raw.githubusercontent.com/Li-Baichuan-James/homework-skill/main/INSTALL.md
+```
 
 ### Intended Use
 
@@ -125,7 +144,12 @@ It enforces a strict controller workflow: parse the assignment, solve one questi
 
 ### Quick Start
 
-1. Install the skill by placing the `homework-solver/` folder in your platform's skills directory.
+1. Install and validate strictly via `INSTALL.md`:
+
+```text
+https://raw.githubusercontent.com/Li-Baichuan-James/homework-skill/main/INSTALL.md
+```
+
 2. In your session, simply ask for the homework to be completed. You do not need to mention the skill name explicitly. For example:
 
 ```text
@@ -148,12 +172,11 @@ Please solve only Q2 and Q4 and generate the solution files.
 
 ### Portability Notes
 
-- A working TeX environment is required if you want the skill to produce compiled `.pdf` output by default. Typical usable engines are `pdflatex`, `xelatex`, or `latexmk`; on Windows this is often MiKTeX, and on macOS/Linux it is often TeX Live.
-- If no usable TeX engine is available, the skill can still deliver `.tex`, but the missing compiled `.pdf` should be reported as a blocked artifact outcome rather than full completion.
-- `pdf` is the only companion skill this workflow should use.
-- If a dedicated PDF skill exists, it should be used; otherwise native PDF tooling is sufficient.
-- If subagents are available, solver and verifier roles are split and must remain separate for each question group.
-- If subagents are unavailable, the same two-phase discipline is executed sequentially.
+For setup, validation, `pdf` companion requirements, and LaTeX environment checks, use `INSTALL.md` as the source of truth:
+
+```text
+https://raw.githubusercontent.com/Li-Baichuan-James/homework-skill/main/INSTALL.md
+```
 
 ### How It Cooperates With `pdf`
 
